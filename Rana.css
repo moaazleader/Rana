@@ -1,0 +1,187 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+overflow-x:hidden;
+background:linear-gradient(
+135deg,
+#ff4d88,
+#ff3366,
+#a855f7,
+#6d28d9
+);
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
+color:white;
+text-align:center;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+section{
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:3rem;
+text-shadow:0 0 20px #fff;
+}
+
+.typing-container{
+font-size:2rem;
+margin-top:20px;
+color:#fff;
+font-weight:bold;
+text-shadow:0 0 20px pink;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+margin-top:25px;
+font-size:1.2rem;
+}
+
+.message{
+margin:25px auto;
+max-width:800px;
+padding:20px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+border-radius:20px;
+transition:0.4s;
+}
+
+.message:hover{
+transform:scale(1.03);
+}
+
+.photo-section h2{
+margin-bottom:40px;
+}
+
+.heart-photo{
+width:250px;
+height:250px;
+margin:auto;
+background:rgba(255,255,255,0.2);
+clip-path:path("M128 230 C128 230 10 150 10 80 C10 20 80 0 128 60 C176 0 245 20 245 80 C245 150 128 230 128 230");
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.heart-photo span{
+font-size:14px;
+}
+
+#relationship-counter{
+font-size:2rem;
+font-weight:bold;
+text-shadow:0 0 15px white;
+}
+
+button{
+padding:15px 35px;
+border:none;
+border-radius:40px;
+font-size:1.2rem;
+cursor:pointer;
+background:white;
+color:#ff3366;
+font-weight:bold;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+#surpriseMessage{
+display:none;
+margin-top:40px;
+font-size:1.3rem;
+line-height:1.8;
+}
+
+.final h2{
+font-size:2rem;
+text-shadow:0 0 20px white;
+}
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:20px;
+animation:floatHeart linear forwards;
+pointer-events:none;
+}
+
+@keyframes floatHeart{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+
+.explosion{
+position:fixed;
+font-size:25px;
+animation:explode 2s linear forwards;
+pointer-events:none;
+}
+
+@keyframes explode{
+0%{
+opacity:1;
+transform:scale(0);
+}
+100%{
+opacity:0;
+transform:translate(var(--x),var(--y)) scale(2);
+}
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2rem;
+}
+
+.typing-container{
+font-size:1.4rem;
+}
+
+#relationship-counter{
+font-size:1.3rem;
+}
+
+.final h2{
+font-size:1.4rem;
+}
+
+}
