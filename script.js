@@ -55,11 +55,11 @@ function updateCounter() {
     const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
     const mins = Math.floor(diff / (1000 * 60)) % 60;
 
-    document.getElementById("relationship-counter").innerHTML = 
-        ${days} Days ❤️<br>
-        ${hours} Hours ❤️<br>
-        ${mins} Minutes ❤️
-    ;
+    document.getElementById("relationship-counter").innerHTML =` 
+${days} Days ❤️<br>
+${hours} Hours ❤️<br>
+${mins} Minutes ❤️
+`;
 }
 
 setInterval(updateCounter, 1000);
